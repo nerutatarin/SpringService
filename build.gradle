@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'ru.zaripov'
+group = 'org.service'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -18,14 +18,70 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	selenium = 'org.seleniumhq.selenium:selenium'
+	seleniumVersion = '4.2.1'
+	jacksonVersion = '2.13.3'
+	retrofitVersion = '2.9.0'
+	log4jVersion = '2.17.2'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	implementation 'org.jsoup:jsoup:1.14.3'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.testng:testng:6.9.6'
+	/*compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'*/
+    //implementation 'org.testng:testng:6.9.6'
+
+	/* Jsoup */
+	implementation "org.jsoup:jsoup:1.14.3"
+
+	/* Selenium */
+	implementation "${selenium}-java:${seleniumVersion}"
+	implementation "${selenium}-api:${seleniumVersion}"
+	implementation "${selenium}-json:${seleniumVersion}"
+	implementation "${selenium}-support:${seleniumVersion}"
+
+	implementation "${selenium}-firefox-driver:${seleniumVersion}"
+	implementation "${selenium}-chrome-driver:${seleniumVersion}"
+	implementation "${selenium}-chromium-driver:${seleniumVersion}"
+	implementation "${selenium}-edge-driver:${seleniumVersion}"
+	implementation "${selenium}-opera-driver:${seleniumVersion}"
+	implementation "${selenium}-safari-driver:${seleniumVersion}"
+	implementation "${selenium}-remote-driver:${seleniumVersion}"
+
+	/* WebDriverManager */
+	implementation "io.github.bonigarcia:webdrivermanager:5.2.0"
+
+	/* Retrofit */
+	implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+	implementation "com.squareup.retrofit2:converter-jackson:${retrofitVersion}"
+	implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+
+	implementation "com.squareup.okhttp3:okhttp:4.9.3"
+	implementation "org.json:json:20220320"
+	implementation "commons-io:commons-io:2.11.0"
+
+	/* Jackson */
+	implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+	implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+	implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
+
+	/* Logger */
+	implementation "log4j:log4j:1.2.17"
+	implementation "log4j:apache-log4j-extras:1.2.17"
+	implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
+	implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+
+	/* YAML */
+	implementation "org.yaml:snakeyaml:1.30"
+
+	/*TelegramBot*/
+	implementation "org.telegram:telegrambots:6.0.1"
+
+	compileOnly "org.projectlombok:lombok:1.18.24"
+	//implementation "junit:junit:4.12"
 }
 
 test {
