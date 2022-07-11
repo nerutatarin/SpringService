@@ -1,0 +1,14 @@
+server:
+  port: 9090
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db
+    username: sa
+    password: sa
+vote-service:
+  telegram-config:
+    bot:
+      name: Ne_ru_bot
+      token: 1079315483:AAEE_z3E8cYpTJDMcDTGCtypt4oHLXsnasc
+
+org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG

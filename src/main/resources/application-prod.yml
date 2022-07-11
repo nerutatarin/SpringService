@@ -1,0 +1,7 @@
+server:
+  port: 9091
+vote-service:
+  telegram-config:
+    bot:
+      name: Avalanche_Voting_Bot
+      token: 5575622725:AAEHzNIXpknign9N9M_33nOZHlEks-mApHs

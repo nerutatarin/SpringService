@@ -1,0 +1,42 @@
+spring:
+  application.name: "web-parse-service"
+  profiles:
+    active: dev
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+vote-service:
+  telegram-config:
+    users:
+      users:
+        - title: Ильназ
+          phone: +79373234416
+          telegramId: 1051811573
+          telegramUserName: zaripov_Ilnaz
+          rule: 1
+        - title: Ольга
+          phone: +79373234417
+          telegramId: 992200503
+          telegramUserName:
+          rule: 1
+        - title: Азат
+          phone: +79177733144
+          telegramId: 410832168
+          telegramUserName: Mukhametzyanov_AM
+          rule: 10
+        - title: Зухра
+          phone: +79173478783
+          telegramId: 406962010
+          telegramUserName:
+          rule: 12
+        - title: Алена
+          phone: +79378457773
+          telegramId: 123456789
+          telegramUserName:
+          rule: 11
+web-parse-service:
+  elschool:
+    url: elschool.ru/logon/index
+    login: ZaripovNI
+    password: aX0629527aX
